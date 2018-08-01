@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-con = MongoClient('&&', 27100)
+con = MongoClient('**', 27100)
 
 db = con.material
 myset = db.ponaparte
