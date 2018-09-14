@@ -7,10 +7,10 @@ import MySQLdb
 import datetime
 
 db = MySQLdb.connect(
-    "**",
-    "**",
-    "**",
-    "**",
+    "127.0.0.1",
+    "",
+    "",
+    "",
     charset='utf8'
 )
 

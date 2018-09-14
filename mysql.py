@@ -6,10 +6,10 @@ import xlrd
 import datetime
 
 db = pymysql.connect(
-    "**",
-    "**",
-    "**",
-    "**",
+    "127.0.0.1",
+    "",
+    "",
+    "",
     charset='utf8'
 )
 
@@ -25,5 +25,18 @@ for r in range(1, sheet.nrows):
              sheet.cell(r, 12).value)
     cursor.execute(sql, values)
 db.commit()
+
+sql = "select * from 20180507temp"
+
+try:
+    cursor.execute(sql)
+    print cursor.rownumber
+    result = cursor.fetchone()
+    while result != None:
+        print result
+        result = cursor.fetchone()
+except:
+    print "exception"
+
 cursor.close()
 db.close()
