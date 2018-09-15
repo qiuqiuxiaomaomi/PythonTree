@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from kazoo.client import KazooClient
-from kazoo.recipe.lock import lock
+from kazoo.recipe.lock import Lock
 import mysql.connector
 import time
 import logging
